@@ -1,0 +1,48 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <div class="mb-md-5 mt-md-4">
+                <h4 class="fw-bold mb-2 text-uppercase">Welcome, <%= emailKey.split('@')[0] %></h4>
+                <h4 class="text-white mt-3 mb-4">Send contact information to Firebase:</h4>
+                <form method="POST" action="/dashboard/addContact" id="firebase-form">
+                  <div class="form-outline form-white mb-4">
+                    <label for="firstName">First Name:</label>
+                    <input class="form-control form-control-lg" type="text" id="firstName" name="firstName" required><br>
+                  </div>
+                  <div class="form-outline form-white mb-4">
+                    <label for="lastName">Last Name:</label>
+                    <input class="form-control form-control-lg" type="text" id="lastName" name="lastName" required><br>
+                  </div>
+                  <div class="form-outline form-white mb-4">
+                    <label for="phone">Phone Number:</label>
+                    <input class="form-control form-control-lg" type="number" id="phone" name="phone" required><br>
+                  </div>
+                  <div class="form-outline form-white mb-4">
+                    <label for="address">Address:</label>
+                    <input class="form-control form-control-lg" type="text" id="address" name="address" required><br>
+                  </div>
+                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Send to Firebase!</button>
+                </form>
+              </div>
+              <div>
+                <p class="mb-2">Want to log out?
+                  <form class="text-white-50 fw-bold" method="POST" action="/logout">
+                    <button type="submit">Logout</button>
+                  </form>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,30 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #2b0000;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(0, 0, 0), rgb(62, 0, 0));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(62, 0, 0))
+}
+
+/* res.redirect('/dashboard?success=true'); */
+.success-message {
+    color: green;
+    font-weight: bold;
+    background-color: #eaf9ea;
+    border: 1px solid #5c9757;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* res.redirect('/dashboard?success=false'); */
+.error-message {
+    color: red;
+    font-weight: bold;
+    background-color: #f9eaea;
+    border: 1px solid #975c5c;
+    padding: 10px;
+    margin-bottom: 10px;
+}
